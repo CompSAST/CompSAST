@@ -38,7 +38,7 @@ Additional testing on vulnerable by design applications that are not built as sc
 [CodeQL-url]: https://codeql.github.com/
 [SonarQube]: https://img.shields.io/badge/SonarQube-4E9BCD?style=for-the-badge
 [SonarQube-url]: https://www.sonarsource.com/products/sonarqube/advanced-security/
-[PVS-Studio]: https://img.shields.io/badge/PVS--Studio%20OSS-8A3FFC?style=for-the-badge
+[PVS-Studio]: https://img.shields.io/badge/PVS--Studio-8A3FFC?style=for-the-badge
 [PVS-Studio-url]: https://pvs-studio.com/pvs-studio/?utm_source=website&utm_medium=github&utm_campaign=open_source
 [Opengrep]: https://img.shields.io/badge/Opengrep-0F172A?style=for-the-badge
 [Opengrep-url]: https://www.opengrep.dev/
