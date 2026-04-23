@@ -3,7 +3,7 @@
 [![Semgrep][Semgrep]][Semgrep-url]
 [![CodeQL][CodeQL]][CodeQL-url]
 [![SonarQube][SonarQube]][SonarQube-url]
-[![PVS-Studio OSS][PVS-Studio]][PVS-Studio-url]
+[![PVS-Studio][PVS-Studio]][PVS-Studio-url]
 [![Opengrep][Opengrep]][Opengrep-url]
 [![PMD][PMD]][PMD-url]
 [![Joern][Joern]][Joern-url]
@@ -16,7 +16,7 @@ in vulnerabilities finding. The experiment would take several SAST instruments t
 - [Semgrep](https://semgrep.dev/)
 - [CodeQL](https://codeql.github.com/)
 - [SonarQube](https://www.sonarsource.com/products/sonarqube/advanced-security/)
-- [PVS-Studio OSS](https://pvs-studio.com/pvs-studio/?utm_source=website&utm_medium=github&utm_campaign=open_source)
+- [PVS-Studio](https://pvs-studio.com/pvs-studio/?utm_source=website&utm_medium=github&utm_campaign=open_source)
 - [Opengrep](https://www.opengrep.dev/)
 - [PMD](https://pmd.github.io/)
 - [Joern](https://joern.io/)
