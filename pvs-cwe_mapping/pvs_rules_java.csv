@@ -1,0 +1,136 @@
+ErrorCode,Mapping,Error Description
+V5301,CWE-1069,OWASP. An exception handling block does not contain any code.
+V5302,CWE-544,OWASP. Exception classes should be publicly accessible.
+V5303,CWE-390,OWASP. The object was created but it is not being used. The 'throw' keyword could be missing.
+V5304,CWE-609,OWASP. Unsafe double-checked locking.
+V5305,"CWE-259,CWE-798",OWASP. Storing credentials inside source code can lead to security issues.
+V5306,CWE-390,OWASP. The original exception object was swallowed. Cause of original exception could be lost.
+V5307,"CWE-336,CWE-337",OWASP. Potentially predictable seed is used in pseudo-random number generator.
+V5308,"CWE-190,CWE-191",OWASP. Possible overflow. The expression will be evaluated before casting. Consider casting one of the operands instead.
+V5309,CWE-89,OWASP. Possible SQL injection. Potentially tainted data is used to create SQL command.
+V5310,"CWE-77,CWE-78",OWASP. Possible command injection. Potentially tainted data is used to create OS command.
+V5311,CWE-88,OWASP. Possible argument injection. Potentially tainted data is used to create OS command.
+V5312,CWE-91,OWASP. Possible XPath injection. Potentially tainted data is used in the XPath expression.
+V5313,CWE-327,OWASP. Do not use old versions of SSL/TLS protocols as it may cause security issues.
+V5314,CWE-1240,OWASP. Use of an outdated hash algorithm is not recommended.
+V5315,CWE-327,OWASP. Use of an outdated cryptographic algorithm is not recommended.
+V5316,CWE-807,Do not use the 'HttpServletRequest.getRequestedSessionId' method because it uses a session ID provided by a client.
+V5317,CWE-327,OWASP. Implementing a cryptographic algorithm is not advised because an attacker might break it.
+V5318,"CWE-266,CWE-276",OWASP. Setting POSIX file permissions to 'all' or 'others' groups can lead to unintended access to files or directories.
+V5319,CWE-117,OWASP. Possible log injection. Potentially tainted data is written into logs.
+V5320,CWE-15,OWASP. Use of potentially tainted data in configuration may lead to security issues.
+V5321,CWE-90,OWASP. Possible LDAP injection. Potentially tainted data is used in a search filter.
+V5322,CWE-470,OWASP. Possible reflection injection. Potentially tainted data is used to select class or method.
+V5323,"CWE-346,CWE-942",OWASP. Potentially tainted data is used to define 'Access-Control-Allow-Origin' header.
+V5324,CWE-601,OWASP. Possible open redirect vulnerability. Potentially tainted data is used in the URL.
+V5325,"CWE-346,CWE-942",OWASP. Setting the value of the 'Access-Control-Allow-Origin' header to '*' is potentially insecure.
+V5326,"CWE-1391,CWE-521",OWASP. A password for a database connection should not be empty
+V5327,"CWE-1333,CWE-20,CWE-400",OWASP. Possible regex injection. Potentially tainted data is used to create regular expression
+V5328,CWE-285,OWASP. Using non-restrictive authorization checks could lead to security violations.
+V5329,"CWE-377,CWE-379",OWASP. Using non-atomic file creation is not recommended because an attacker might intercept file ownership.
+V5330,CWE-79,OWASP. Possible XSS injection. Potentially tainted data might be used to execute a malicious script.
+V5331,"CWE-1051,CWE-540",OWASP. Hardcoded IP addresses are not secure.
+V5332,"CWE-20,CWE-22,CWE-23,CWE-24,CWE-25,CWE-26,CWE-27,CWE-28,CWE-29,CWE-30,CWE-31,CWE-32,CWE-33,CWE-34,CWE-35,CWE-36,CWE-37,CWE-38,CWE-39,CWE-40",OWASP. Possible path traversal vulnerability. Potentially tainted data might be used to access files or folders outside a target directory.
+V5333,CWE-502,OWASP. Possible insecure deserialization vulnerability. Potentially tainted data is used to create an object during deserialization.
+V5334,CWE-918,OWASP. Possible server-side request forgery. Potentially tainted data in the URL is used to access a remote resource.
+V5335,CWE-611,OWASP. Potential XXE vulnerability. Insecure XML parser is used to process potentially tainted data.
+V5336,CWE-776,OWASP. Potential XEE vulnerability. Insecure XML parser is used to process potentially tainted data.
+V5337,CWE-943,OWASP. Possible NoSQL injection. Potentially tainted data is used to create query.
+V5338,"CWE-22,CWE-23,CWE-641,CWE-99",OWASP. Possible Zip Slip vulnerability. Potentially tainted data might be used to extract the file.
+V5339,CWE-95,OWASP. Potential RCE vulnerability. Insecure GraalVM context is used to process potentially tainted data.
+V5340,CWE-507,OWASP. Code contains invisible characters that may alter its logic. Consider enabling the display of invisible characters in the code editor.
+V6001,"CWE-570,CWE-571",There are identical sub-expressions to the left and to the right of the 'foo' operator.
+V6003,CWE-570,The use of 'if (A) {...} else if (A) {...}' pattern was detected. There is a probability of logical error presence.
+V6004,CWE-691,The 'then' statement is equivalent to the 'else' statement.
+V6006,CWE-390,The object was created but it is not being used. The 'throw' keyword could be missing.
+V6007,"CWE-570,CWE-571",Expression is always true/false.
+V6008,"CWE-476,CWE-690",Potential null dereference.
+V6009,CWE-628,Function receives an odd argument.
+V6010,CWE-252,The return value of function 'Foo' is required to be utilized.
+V6011,CWE-682,The expression contains a suspicious mix of integer and real types.
+V6012,CWE-783,"The '?:' operator, regardless of its conditional expression, always returns one and the same value."
+V6013,CWE-595,"Comparison of arrays, strings, collections by reference. Possibly an equality comparison was intended."
+V6014,CWE-393,It's odd that this method always returns one and the same value of NN.
+V6015,CWE-480,Consider inspecting the expression. Probably the '!='/'-='/'+=' should be used here.
+V6018,CWE-691,Constant expression in switch statement.
+V6019,CWE-561,Unreachable code detected. It is possible that an error is present.
+V6020,CWE-369,Division or mod division by zero.
+V6021,CWE-563,The value is assigned to the 'x' variable but is not used.
+V6024,CWE-670,The 'continue' operator will terminate 'do { ... } while (false)' loop because the condition is always false.
+V6025,"CWE-125,CWE-787",Possibly index is out of bound.
+V6029,CWE-683,Possible incorrect order of arguments passed to method.
+V6030,CWE-691,The function located to the right of the '|' and '&' operators will be called regardless of the value of the left operand. Consider using '||' and '&&' instead.
+V6031,CWE-691,The variable 'X' is being used for this loop and for the outer loop.
+V6033,CWE-462,An item with the same key has already been added.
+V6034,CWE-758,Shift by N bits is inconsistent with the size of type.
+V6036,CWE-457,The value from the uninitialized optional is used.
+V6037,CWE-670,An unconditional 'break/continue/return/goto' within a loop.
+V6038,"CWE-570,CWE-571",Comparison with 'double.NaN' is meaningless. Use 'double.isNaN()' method instead.
+V6039,CWE-561,There are two 'if' statements with identical conditional expressions. The first 'if' statement contains method return. This means that the second 'if' statement is senseless.
+V6040,CWE-483,The code's operational logic does not correspond with its formatting.
+V6041,CWE-481,Suspicious assignment inside the conditional expression of 'if/while/do...while' statement.
+V6042,CWE-704,"The expression is checked for compatibility with type 'A', but is cast to type 'B'."
+V6043,CWE-691,Consider inspecting the 'for' operator. Initial and final values of the iterator are the same.
+V6044,CWE-682,Postfix increment/decrement is senseless because this variable is overwritten.
+V6046,"CWE-628,CWE-685,CWE-686",Incorrect format. Consider checking the N format items of the 'Foo' function.
+V6047,CWE-670,It is possible that this 'else' branch must apply to the previous 'if' statement.
+V6048,CWE-480,This expression can be simplified. One of the operands in the operation equals NN. Probably it is a mistake.
+V6050,CWE-665,Class initialization cycle is present.
+V6051,CWE-584,Use of jump statements in 'finally' block can lead to the loss of unhandled exceptions.
+V6054,CWE-486,Classes should not be compared by their name.
+V6057,CWE-571,Consider inspecting this expression. The expression is excessive or contains a misprint.
+V6058,CWE-1024,Comparing objects of incompatible types.
+V6059,CWE-185,"Odd use of special character in regular expression. Possibly, it was intended to be escaped."
+V6060,CWE-476,The reference was used before it was verified against null.
+V6061,CWE-682,The used constant value is represented by an octal form.
+V6062,CWE-674,Possible infinite recursion.
+V6063,CWE-670,Odd semicolon ';' after 'if/for/while' operator.
+V6064,CWE-572,Suspicious invocation of Thread.run().
+V6067,CWE-691,Two or more case-branches perform the same actions.
+V6070,CWE-662,Unsafe synchronization on an object.
+V6072,CWE-682,"Two similar code fragments were found. Perhaps, this is a typo and 'X' variable should be used instead of 'Y'."
+V6073,CWE-684,It is not recommended to return null or throw exceptions from 'toString' / 'clone' methods.
+V6074,CWE-567,Non-atomic modification of volatile variable.
+V6075,CWE-684,The signature of method 'X' does not conform to serialization requirements.
+V6077,CWE-478,A suspicious label is present inside a switch(). It is possible that these are misprints and 'default:' label should be used instead.
+V6079,CWE-129,"Value of variable is checked after use. Potential logical error is present. Check lines: N1, N2."
+V6080,CWE-697,Consider checking for misprints. It's possible that an assigned variable should be checked in the next condition.
+V6082,CWE-609,Unsafe double-checked locking.
+V6085,CWE-697,An abnormality within similar comparisons. It is possible that a typo is present inside the expression.
+V6086,CWE-670,Suspicious code formatting. 'else' keyword is probably missing.
+V6089,CWE-670,"It's possible that the line was commented out improperly, thus altering the program's operation logics."
+V6090,CWE-665,Field 'A' is being used before it was initialized.
+V6093,CWE-476,Automatic unboxing of a variable may cause NullPointerException.
+V6094,CWE-682,The expression was implicitly cast from integer type to real type. Consider utilizing an explicit type cast to avoid the loss of a fractional part.
+V6095,CWE-821,Thread.sleep() inside synchronized block/method may cause decreased performance.
+V6096,CWE-682,An odd precise comparison. Consider using a comparison with defined precision: Math.abs(A - B) < Epsilon or Math.abs(A - B) > Epsilon.
+V6099,CWE-691,The initial value of the index in the nested loop equals 'i'. Consider using 'i + 1' instead.
+V6100,CWE-688,An object is used as an argument to its own method. Consider checking the first actual argument of the 'Foo' method.
+V6101,CWE-253,"compareTo()-like methods can return not only the values -1, 0 and 1, but any values."
+V6102,CWE-662,Inconsistent synchronization of a field. Consider synchronizing the field on all usages.
+V6103,CWE-391,Ignored InterruptedException could lead to delayed thread shutdown.
+V6105,CWE-190,Consider inspecting the loop expression. It is possible that different variables are used inside initializer and iterator.
+V6106,CWE-704,Casting expression to 'X' type before implicitly casting it to other type may be excessive or incorrect.
+V6107,CWE-547,The constant NN is being utilized. The resulting value could be inaccurate. Consider using the KK constant.
+V6108,CWE-834,Do not use real-type variables in 'for' loop counters.
+V6109,"CWE-336,CWE-337",Potentially predictable seed is used in pseudo-random number generator.
+V6111,CWE-839,Potentially negative value is used as the size of an array.
+V6113,CWE-682,Suspicious division. Absolute value of the left operand is less than the value of the right operand.
+V6114,CWE-404,The 'A' class containing Closeable members does not release the resources that the field is holding.
+V6115,CWE-404,Not all Closeable members are released inside the 'close' method.
+V6116,CWE-459,"The class does not implement the Closeable interface, but it contains the 'close' method that releases resources."
+V6117,"CWE-190,CWE-191",Possible overflow. The expression will be evaluated before casting. Consider casting one of the operands instead.
+V6118,CWE-390,The original exception object was swallowed. Cause of original exception could be lost.
+V6119,CWE-480,The result of '&' operator is always '0'.
+V6120,CWE-682,The result of the '&' operator is '0' because one of the operands is '0'.
+V6123,CWE-563,Modified value of the operand is not used after the increment/decrement operation.
+V6124,"CWE-197,CWE-681",Converting an integer literal to the type with a smaller value range will result in overflow.
+V6125,CWE-821,"Calling the 'wait', 'notify', and 'notifyAll' methods outside of synchronized context will lead to 'IllegalMonitorStateException'."
+V6126,CWE-821,Native synchronization used on high-level concurrency class.
+V6127,"CWE-459,CWE-772",Closeable object is not closed. This may lead to a resource leak.
+V6128,CWE-672,Using a Closeable object after it was closed can lead to an exception.
+V6129,CWE-833,Possible deadlock due to incorrect synchronization order between locks.
+V6130,CWE-190,Integer overflow in arithmetic expression.
+V6131,CWE-190,Casting to a type with a smaller range will result in an overflow.
+V6132,CWE-691,"It is possible that 'else' block was forgotten or commented out, thus altering the program's operation logics."
+V6133,CWE-684,Dereferencing the parameter without a null check. Passing the 'null' value to the 'equals' method should not cause 'NullPointerException'.

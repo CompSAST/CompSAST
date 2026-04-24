@@ -1,0 +1,373 @@
+ErrorCode,Mapping,Error Description
+V501,"CWE-570,CWE-571",Identical sub-expressions to the left and to the right of 'foo' operator.
+V502,CWE-783,The '?:' operator may not work as expected. The '?:' operator has a lower priority than the 'foo' operator.
+V503,CWE-697,Nonsensical comparison: pointer < 0.
+V504,CWE-841,Semicolon ';' is probably missing after the 'return' keyword.
+V505,CWE-770,The 'alloca' function is used inside the loop. This can quickly overflow stack.
+V506,CWE-562,Pointer to local variable 'X' is stored outside the scope of this variable. Such a pointer will become invalid.
+V507,CWE-562,Pointer to local array 'X' is stored outside the scope of this array. Such a pointer will become invalid.
+V508,CWE-480,The 'new type(n)' pattern was detected. Probably meant: 'new type[n]'.
+V509,"CWE-248,CWE-703",Exceptions raised inside noexcept functions must be wrapped in a try..catch block.
+V510,CWE-686,The 'Foo' function receives class-type variable as Nth actual argument. This is unexpected behavior.
+V511,CWE-467,The sizeof() operator returns pointer size instead of array size.
+V512,"CWE-119,CWE-125,CWE-193,CWE-467,CWE-682,CWE-787,CWE-806",Call of the 'Foo' function will lead to buffer overflow.
+V513,CWE-676,Use _beginthreadex/_endthreadex functions instead of CreateThread/ExitThread functions.
+V514,CWE-131,Potential logical error. Size of a pointer is divided by another value.
+V515,CWE-763,The 'delete' operator is applied to non-pointer.
+V516,"CWE-570,CWE-571",Non-null function pointer is compared to null. Consider inspecting the expression.
+V517,CWE-570,Potential logical error. The 'if (A) {...} else if (A) {...}' pattern was detected.
+V518,CWE-131,The 'malloc' function allocates suspicious amount of memory calculated by 'strlen(expr)'. Perhaps the correct expression is strlen(expr) + 1.
+V519,CWE-563,The 'x' variable is assigned values twice successively. Perhaps this is a mistake.
+V520,CWE-480,"Comma operator ',' in array index expression."
+V521,CWE-480,"Expressions that use comma operator ',' are dangerous. Make sure the expression is correct."
+V522,"CWE-476,CWE-690",Possible null pointer dereference.
+V523,CWE-691,The 'then' statement is equivalent to the 'else' statement.
+V525,CWE-682,"Code contains collection of similar blocks. Check items X, Y, Z, ... in lines N1, N2, N3, ..."
+V526,CWE-253,The 'strcmp' function returns 0 if corresponding strings are equal. Consider inspecting the condition for mistakes.
+V527,CWE-351,The 'zero' value is assigned to pointer. Probably meant: *ptr = zero.
+V528,CWE-697,Pointer is compared with 'zero' value. Probably meant: *ptr != zero.
+V529,CWE-670,Suspicious semicolon ';' after 'if/for/while' operator.
+V530,CWE-252,Return value of 'Foo' function is required to be used.
+V531,CWE-131,The sizeof() operator is multiplied by sizeof(). Consider inspecting the expression.
+V532,CWE-480,Consider inspecting the statement of '*pointer++' pattern. Probably meant: '(*pointer)++'.
+V533,CWE-691,It is possible that a wrong variable is incremented inside the 'for' operator. Consider inspecting 'X'.
+V534,CWE-691,It is possible that a wrong variable is compared inside the 'for' operator. Consider inspecting 'X'.
+V535,CWE-691,The 'X' variable is used for this loop and outer loops.
+V536,CWE-682,Constant value is represented by an octal form.
+V537,CWE-682,Potential incorrect use of item 'X'. Consider inspecting the expression.
+V539,CWE-688,Iterators are passed as arguments to 'Foo' function. Consider inspecting the expression.
+V540,CWE-628,Member 'x' should point to string terminated by two 0 characters.
+V541,CWE-628,String is printed into itself. Consider inspecting the expression.
+V542,CWE-704,Suspicious type cast: 'Type1' to ' Type2'. Consider inspecting the expression.
+V543,CWE-704,It is suspicious that value 'X' is assigned to the variable 'Y' of HRESULT type.
+V544,CWE-253,It is suspicious that the value 'X' of HRESULT type is compared with 'Y'.
+V545,CWE-253,Conditional expression of 'if' statement is incorrect for the HRESULT type value 'Foo'. The SUCCEEDED or FAILED macro should be used instead.
+V546,CWE-665,The 'Foo(Foo)' class member is initialized with itself.
+V547,"CWE-570,CWE-571",Expression is always true/false.
+V548,CWE-704,TYPE X[][] is not equivalent to TYPE **X. Consider inspecting type casting.
+V549,CWE-688,The 'first' argument of 'Foo' function is equal to the 'second' argument.
+V550,CWE-682,Suspicious precise comparison. Consider using a comparison with defined precision: fabs(A - B) < Epsilon or fabs(A - B) > Epsilon.
+V551,CWE-561,Unreachable code under a 'case' label.
+V552,CWE-480,A bool type variable is incremented. Perhaps another variable should be incremented instead.
+V554,CWE-762,Incorrect use of smart pointer.
+V555,CWE-191,Expression of the 'A - B > 0' kind will work as 'A != B'.
+V556,CWE-697,Values of different enum types are compared.
+V557,"CWE-119,CWE-125,CWE-787",Possible array overrun.
+V558,CWE-562,Function returns pointer/reference to temporary local object.
+V559,CWE-481,Suspicious assignment inside the conditional expression of 'if/while/for' statement.
+V560,"CWE-570,CWE-571",Part of conditional expression is always true/false.
+V561,CWE-563,Consider assigning value to 'foo' variable instead of declaring it anew.
+V562,CWE-563,Bool type value is compared with value of N. Consider inspecting the expression.
+V563,CWE-670,An 'else' branch may apply to the previous 'if' statement.
+V564,CWE-480,The '&' or '|' operator is applied to bool type value. Check for missing parentheses or use the '&&' or '||' operator.
+V565,"CWE-1069,CWE-390,CWE-544",Empty exception handler. Silent suppression of exceptions can hide errors in source code during testing.
+V566,CWE-587,Integer constant is converted to pointer. Check for an error or bad coding style.
+V567,CWE-758,Modification of variable is unsequenced relative to another operation on the same variable. This may lead to undefined behavior.
+V568,CWE-131,It is suspicious that the argument of sizeof() operator is the expression.
+V569,CWE-197,Truncation of constant value.
+V570,CWE-480,Variable is assigned to itself.
+V571,CWE-571,Recurring check. This condition was already verified in previous line.
+V572,CWE-665,Object created using 'new' operator is immediately cast to another type. Consider inspecting the expression.
+V573,CWE-457,Use of uninitialized variable 'Foo'. The variable was used to initialize itself.
+V574,CWE-823,Pointer is used both as an array and as a pointer to single object.
+V575,"CWE-1164,CWE-628",Function receives suspicious argument.
+V576,"CWE-628,CWE-685,CWE-686,CWE-687",Incorrect format. Consider checking the Nth actual argument of the 'Foo' function.
+V577,CWE-478,Label is present inside switch(). Check for typos and consider using the 'default:' operator instead.
+V578,CWE-480,Suspicious bitwise operation was detected. Consider inspecting it.
+V579,CWE-467,The 'Foo' function receives the pointer and its size as arguments. This may be a potential error. Inspect the Nth argument.
+V580,CWE-843,Suspicious explicit type casting. Consider inspecting the expression.
+V581,CWE-670,Conditional expressions of 'if' statements located next to each other are identical.
+V582,"CWE-119,CWE-125,CWE-787",Consider reviewing the source code that uses the container.
+V583,CWE-783,"The '?:' operator, regardless of its conditional expression, always returns the same value."
+V584,CWE-480,Same value is present on both sides of the operator. The expression is incorrect or can be simplified.
+V585,CWE-762,Attempt to release memory that stores the 'Foo' local variable.
+V586,"CWE-415,CWE-675",The 'Foo' function is called twice to deallocate the same resource.
+V588,CWE-480,Expression of the 'A =+ B' kind is used. Possibly meant: 'A += B'. Consider inspecting the expression.
+V589,CWE-480,Expression of the 'A =- B' kind is used. Possibly meant: 'A -= B'. Consider inspecting the expression.
+V590,CWE-571,Possible excessive expression or typo. Consider inspecting the expression.
+V591,CWE-393,Non-void function must return value.
+V593,CWE-783,Expression 'A = B == C' is calculated as 'A = (B == C)'. Consider inspecting the expression.
+V594,CWE-823,Pointer to array is out of array bounds.
+V595,CWE-476,"Pointer was used before its check for nullptr. Check lines: N1, N2."
+V596,CWE-390,Object was created but is not used. Check for missing 'throw' keyword.
+V597,CWE-14,Compiler may delete 'memset' function call that is used to clear 'Foo' buffer. Use the RtlSecureZeroMemory() function to erase private data.
+V598,CWE-665,Memory manipulation function is used to work with a class object containing a virtual table pointer. The result of such an operation may be unexpected.
+V599,CWE-1079,"The virtual destructor is not present, although the 'Foo' class contains virtual functions."
+V600,"CWE-570,CWE-571",The 'Foo' pointer is always not equal to NULL. Consider inspecting the condition.
+V601,CWE-704,Suspicious implicit type casting.
+V602,CWE-480,The '<' operator should probably be replaced with '<<'. Consider inspecting this expression.
+V603,CWE-665,"Object was created but not used. If you wish to call constructor, use 'this->Foo::Foo(....)'."
+V604,CWE-682,Number of iterations in loop equals size of a pointer. Consider inspecting the expression.
+V605,CWE-682,Unsigned value is compared to the NN number. Consider inspecting the expression.
+V607,CWE-482,Ownerless expression 'Foo'.
+V608,CWE-704,Recurring sequence of explicit type casts.
+V609,CWE-369,Possible division or mod by zero.
+V610,CWE-758,Undefined behavior. Check the shift operator.
+V611,"CWE-590,CWE-762",Memory allocation and deallocation methods are incompatible.
+V612,CWE-670,Unconditional 'break/continue/return/goto' within a loop.
+V613,CWE-761,Suspicious pointer arithmetic with 'malloc/new'.
+V614,"CWE-457,CWE-824",Use of 'Foo' uninitialized variable.
+V615,CWE-704,Suspicious explicit conversion from 'float *' type to 'double *' type.
+V616,CWE-480,Use of 'Foo' named constant with 0 value in bitwise operation.
+V617,CWE-480,Argument of the '|' bitwise operation always contains non-zero value. Consider inspecting the condition.
+V618,CWE-134,"Dangerous call of 'Foo' function. The passed line may contain format specification. Example of safe code: printf(""%s"", str);"
+V619,CWE-480,Array is used as pointer to single object.
+V620,CWE-682,Expression of sizeof(T)*N kind is summed up with pointer to T type. Consider inspecting the expression.
+V621,CWE-835,Loop may execute incorrectly or may not execute at all. Consider inspecting the 'for' operator.
+V622,CWE-478,First 'case' operator may be missing. Consider inspecting the 'switch' statement.
+V623,CWE-416,Temporary object is created and then destroyed. Consider inspecting the '?:' operator.
+V624,CWE-547,Use of constant NN. The resulting value may be inaccurate. Consider using the M_NN constant from <math.h>.
+V625,CWE-691,Initial and final values of the iterator are the same. Consider inspecting the 'for' operator.
+V626,CWE-483,"It's possible that ',' should be replaced by ';'. Consider checking for typos."
+V627,CWE-682,"Argument of sizeof() is a macro, which expands to a number. Consider inspecting the expression."
+V628,CWE-670,"It is possible that a line was commented out improperly, thus altering the program's operation logic."
+V629,CWE-190,Bit shifting of the 32-bit value with a subsequent expansion to the 64-bit type. Consider inspecting the expression.
+V630,CWE-665,The 'malloc' function is used to allocate memory for an array of objects that are classes containing constructors/destructors.
+V631,"CWE-30,CWE-37,CWE-39",Defining absolute path to file or directory is considered a poor coding style. Consider inspecting the 'Foo' function call.
+V632,CWE-686,Argument is of the 'T' type. Consider inspecting the NN argument of the 'Foo' function.
+V633,CWE-480,The '!=' operator should probably be used here. Consider inspecting the expression.
+V634,CWE-783,Priority of '+' operation is higher than priority of '<<' operation. Consider using parentheses in the expression.
+V635,CWE-135,Length should be probably multiplied by sizeof(wchar_t). Consider inspecting the expression.
+V636,CWE-682,Expression was implicitly cast from integer type to real type. Consider using an explicit type cast to avoid overflow or loss of a fractional part.
+V637,CWE-570,Use of two opposite conditions. The second condition is always false.
+V638,CWE-665,Terminal null is present inside a string. Use of '\0xNN' characters. Probably meant: '\xNN'.
+V639,CWE-685,One of closing ')' parentheses is probably positioned incorrectly. Consider inspecting the expression for function call.
+V640,CWE-483,Code's operational logic does not correspond with its formatting.
+V641,CWE-704,Buffer size is not a multiple of element size.
+V642,CWE-197,Function result is saved inside the 'byte' type variable. Significant bits may be lost. This may break the program's logic.
+V643,CWE-480,Suspicious pointer arithmetic. Value of 'char' type is added to a string pointer.
+V644,CWE-664,Suspicious function declaration. Consider creating a 'T' type object.
+V645,"CWE-193,CWE-787","Function call may lead to buffer overflow. Bounds should not contain size of a buffer, but a number of characters it can hold."
+V646,CWE-670,The 'else' keyword may be missing. Consider inspecting the program's logic.
+V647,CWE-587,Value of 'A' type is assigned to a pointer of 'B' type.
+V648,CWE-783,Priority of '&&' operation is higher than priority of '||' operation.
+V649,CWE-561,Two 'if' statements with identical conditional expressions. The first 'if' statement contains function return. This means that the second 'if' statement is senseless.
+V650,CWE-468,Type casting is used 2 times in a row. The '+' operation is executed. Probably meant: (T1)((T2)a + b).
+V651,CWE-682,"Suspicious operation of 'sizeof(X)/sizeof(T)' kind, where 'X' is of the 'class' type."
+V652,CWE-480,Operation is executed 3 or more times in a row.
+V653,CWE-665,Suspicious string consisting of two parts is used for initialization. Comma may be missing.
+V654,CWE-834,Condition of a loop is always true/false.
+V655,CWE-480,Strings were concatenated but not used. Consider inspecting the expression.
+V656,CWE-665,Variables are initialized through the call to the same function. It's probably an error or un-optimized code.
+V657,CWE-393,Function always returns the same value of NN. Consider inspecting the function.
+V658,CWE-190,"Value is subtracted from unsigned variable. It can result in an overflow. In such a case, the comparison operation may behave unexpectedly."
+V660,CWE-480,Program contains an unused label and function call: 'CC:AA()'. Probably meant: 'CC::AA()'.
+V662,CWE-758,Different containers are used to set up initial and final values of iterator. Consider inspecting the loop expression.
+V663,CWE-834,Infinite loop is possible. The 'cin.eof()' condition is insufficient to break from the loop. Consider adding the 'cin.fail()' function call to the conditional expression.
+V664,CWE-476,Pointer is dereferenced in the member initializer list before it is checked for null in the body of a constructor.
+V666,CWE-805,Value may not correspond with the length of a string passed with YY argument. Consider inspecting the NNth argument of the 'Foo' function.
+V667,CWE-480,The 'throw' operator does not have any arguments and is not located within the 'catch' block.
+V668,"CWE-570,CWE-571","Possible meaningless check for null, as memory was allocated using 'new' operator. Memory allocation will lead to an exception."
+V670,CWE-457,Uninitialized class member is used to initialize another member. Remember that members are initialized in the order of their declarations inside a class.
+V671,CWE-687,The 'swap' function may interchange a variable with itself.
+V673,CWE-190,"More than N bits are required to store the value, but the expression evaluates to the T type which can only hold K bits."
+V674,CWE-682,Expression contains a suspicious mix of integer and real types.
+V676,CWE-253,Incorrect comparison of BOOL type variable with TRUE.
+V678,CWE-688,Object is used as an argument to its own method. Consider checking the first actual argument of the 'Foo' function.
+V679,CWE-457,The 'X' variable was not initialized. This variable is passed by reference to the 'Foo' function in which its value will be used.
+V680,CWE-401,"The 'delete A, B' expression only destroys the 'A' object. Then the ',' operator returns a resulting value from the right side of the expression."
+V681,CWE-758,The language standard does not define order in which 'Foo' functions are called during evaluation of arguments.
+V683,CWE-190,The 'i' variable should probably be incremented instead of the 'n' variable. Consider inspecting the loop expression.
+V684,CWE-682,Value of variable is not modified. It is possible that '1' should be present instead of '0'. Consider inspecting the expression.
+V685,CWE-480,The expression contains a comma. Consider inspecting the return statement.
+V686,CWE-571,Pattern A || (A && ...) was detected. The expression is excessive or contains a logical error.
+V687,CWE-682,Size of array calculated by sizeof() operator was added to a pointer. It is possible that the number of elements should be calculated by sizeof(A)/sizeof(A[0]).
+V689,CWE-404,Destructor of 'Foo' class is not declared as virtual. A smart pointer may not destroy an object correctly.
+V692,CWE-788,"Inappropriate attempt to append a null character to a string. To determine the length of a string by 'strlen' function correctly, use a string ending with a null terminator in the first place."
+V693,CWE-835,It is possible that 'i < X.size()' should be used instead of 'X.size()'. Consider inspecting conditional expression of the loop.
+V694,CWE-571,The condition (ptr - const_value) is only false if the value of a pointer equals a magic constant.
+V695,"CWE-561,CWE-670",Range intersections are possible within conditional expressions.
+V696,CWE-670,The 'continue' operator will terminate 'do { ... } while (FALSE)' loop because the condition is always false.
+V697,CWE-682,Number of elements in the allocated array equals the size of a pointer in bytes.
+V698,CWE-253,"Functions of strcmp() kind can return any values, not only -1, 0, or 1."
+V699,CWE-481,It is possible that 'foo = bar == baz ? .... : ....' should be used here instead of 'foo = bar = baz ? .... : ....'. Consider inspecting the expression.
+V700,CWE-480,It is suspicious that variable is initialized through itself. Consider inspecting the 'T foo = foo = x;' expression.
+V701,CWE-401,"Possible realloc() leak: when realloc() fails to allocate memory, original pointer is lost. Consider assigning realloc() to a temporary pointer."
+V702,CWE-544,Classes should always be derived from std::exception (and alike) as 'public'.
+V704,"CWE-570,CWE-571",The expression is always false on newer compilers. Avoid using 'this == 0' comparison.
+V705,CWE-691,"It is possible that 'else' block was forgotten or commented out, thus altering the program's operation logics."
+V706,CWE-682,Suspicious division: sizeof(X) / Value. Size of every element in X array is not equal to divisor.
+V708,CWE-758,"Dangerous construction is used: 'm[x] = m.size()', where 'm' is of 'T' class. This may lead to undefined behavior."
+V709,CWE-682,Suspicious comparison found: 'a == b == c'. Remember that 'a == b == c' is not equal to 'a == b && b == c'.
+V712,CWE-835,Compiler may optimize out this loop or make it infinite. Use volatile variable(s) or synchronization primitives to avoid this.
+V713,CWE-476,Pointer was used in the logical expression before its check for nullptr in the same logical expression.
+V714,CWE-563,"Variable is not passed into foreach loop by reference, but its value is changed inside of the loop."
+V715,CWE-691,The 'while' operator has empty body. This pattern is suspicious.
+V716,CWE-704,Suspicious type conversion: HRESULT -> BOOL (BOOL -> HRESULT).
+V717,CWE-843,It is suspicious to cast object of base class V to derived class U.
+V720,CWE-676,The 'SuspendThread' function is usually used when developing a debugger. See documentation for details.
+V721,"CWE-665,CWE-697",The VARIANT_BOOL type is used incorrectly. The true value (VARIANT_TRUE) is defined as -1.
+V722,CWE-697,Abnormality within similar comparisons. It is possible that a typo is present inside the expression.
+V723,CWE-416,"Function returns a pointer to the internal string buffer of a local object, which will be destroyed."
+V724,CWE-197,Converting integers or pointers to BOOL can lead to a loss of high-order bits. Non-zero value can become 'FALSE'.
+V725,CWE-704,"Dangerous cast of 'this' to 'void*' type in the 'Base' class, as it is followed by a subsequent cast to 'Class' type."
+V726,CWE-761,Attempt to free memory containing the 'int A[10]' array by using the 'free(A)' function.
+V727,CWE-783,Return value of 'wcslen' function is not multiplied by 'sizeof(wchar_t)'.
+V728,CWE-570,Excessive check can be simplified. The '||' operator is surrounded by opposite expressions 'x' and '!x'.
+V730,CWE-457,Not all members of a class are initialized inside the constructor.
+V731,CWE-665,The variable of char type is compared with pointer to string.
+V732,CWE-480,Unary minus operator does not modify a bool type value.
+V733,CWE-783,It is possible that macro expansion resulted in incorrect evaluation order.
+V736,CWE-758,The behavior is undefined for arithmetic or comparisons with pointers that do not point to members of the same array.
+V737,CWE-665,"It is possible that ',' comma is missing at the end of the string."
+V738,CWE-672,Temporary anonymous object is used.
+V739,CWE-20,EOF should not be compared with a value of the 'char' type. Consider using the 'int' type.
+V741,CWE-480,"Use of the throw (a, b); pattern. It is possible that type name was omitted: throw MyException(a, b);."
+V742,CWE-170,Function receives an address of a 'char' type variable instead of pointer to a buffer.
+V743,CWE-475,The memory areas must not overlap. Use 'memmove' function.
+V744,"CWE-664,CWE-820",Temporary object is immediately destroyed after being created. Consider naming the object.
+V745,CWE-704,A 'wchar_t *' type string is incorrectly converted to 'BSTR' type string.
+V747,CWE-480,Suspicious expression inside parentheses. A function name may be missing.
+V748,CWE-762,Memory for 'getline' function should be allocated only by 'malloc' or 'realloc' functions. Consider inspecting the first parameter of 'getline' function.
+V749,CWE-675,Destructor of the object will be invoked a second time after leaving the object's scope.
+V752,CWE-788,Creating an object with placement new requires a buffer of large size.
+V753,CWE-682,The '&=' operation always sets a value of 'Foo' variable to zero.
+V755,CWE-123,Copying from potentially tainted data source. Buffer overflow is possible.
+V757,CWE-690,It is possible that an incorrect variable is compared with null after type conversion using 'dynamic_cast'.
+V758,CWE-416,Reference was invalidated because of destruction of the temporary object returned by the function.
+V759,CWE-703,Violated order of exception handlers. Exception caught by handler for base class.
+V762,CWE-670,Consider inspecting virtual function arguments. See NN argument of function 'Foo' in derived class and base class.
+V764,CWE-683,Possible incorrect order of arguments passed to function.
+V765,CWE-682,Compound assignment expression 'X += X + N' is suspicious. Consider inspecting it for a possible error.
+V766,CWE-462,An item with the same key has already been added.
+V768,"CWE-570,CWE-571",Variable is of enum type. It is suspicious that it is used as a variable of a Boolean-type.
+V769,CWE-119,The pointer in the expression equals nullptr. The resulting value is meaningless and should not be used.
+V770,CWE-480,Possible use of left shift operator instead of comparison operator.
+V772,CWE-758,Calling the 'delete' operator for a void pointer will cause undefined behavior.
+V773,"CWE-401,CWE-775",Function exited without releasing the pointer/handle. A memory/resource leak is possible.
+V774,CWE-416,Pointer was used after the memory was released.
+V775,CWE-1023,It is suspicious that the BSTR data type is compared using a relational operator.
+V776,CWE-835,Potentially infinite loop. The variable in the loop exit condition does not change its value between iterations.
+V777,CWE-468,Dangerous widening type conversion from an array of derived-class objects to a base-class pointer.
+V778,CWE-682,"Two similar code fragments. Perhaps, it is a typo and 'X' variable should be used instead of 'Y'."
+V779,CWE-561,Unreachable code was detected. It is possible that an error is present.
+V781,"CWE-129,CWE-20,CWE-789","Value of a variable is checked after it is used. Possible error in program's logic. Check lines: N1, N2."
+V782,CWE-469,It is pointless to compute the distance between the elements of different arrays.
+V783,CWE-119,Possible dereference of invalid iterator 'X'.
+V784,CWE-197,The size of the bit mask is less than the size of the first operand. This will cause the loss of the higher bits.
+V785,CWE-691,Constant expression in switch statement.
+V786,CWE-197,"Assigning the value C to the X variable looks suspicious. The value range of the variable: [A, B]."
+V788,CWE-457,Review captured variable in lambda expression.
+V789,CWE-672,"Iterators for the container, used in the range-based for loop, become invalid upon a function call."
+V791,CWE-691,The initial value of the index in the nested loop equals 'i'. Consider using 'i + 1' instead.
+V792,CWE-691,The function located to the right of the '|' and '&' operators will be called regardless of the value of the left operand. Consider using '||' and '&&' instead.
+V793,CWE-691,"It is suspicious that the result of the statement is a part of the condition. Perhaps, this statement should have been compared with something else."
+V794,CWE-404,The assignment operator should be protected from the case of 'this == &src'.
+V796,CWE-484,A 'break' statement is probably missing in a 'switch' statement.
+V797,CWE-253,The function is used as if it returned a bool type. The return value of the function should probably be compared with std::string::npos.
+V798,CWE-789,The size of the dynamic array can be less than the number of elements in the initializer.
+V1001,"CWE-14,CWE-563",Variable is assigned but not used by the end of the function.
+V1002,CWE-665,"Class that contains pointers, constructor and destructor is copied by the automatically generated operator= or copy constructor."
+V1004,"CWE-119,CWE-476,CWE-628",Pointer was used unsafely after its check for nullptr.
+V1005,CWE-404,The resource was acquired using 'X' function but was released using incompatible 'Y' function.
+V1006,CWE-675,Several shared_ptr objects are initialized by the same pointer. A double memory deallocation will occur.
+V1007,CWE-457,Value from the uninitialized optional is used. It may be an error.
+V1008,CWE-691,No more than one iteration of the loop will be performed. Consider inspecting the 'for' operator.
+V1009,CWE-665,Check the array initialization. Only the first element is initialized explicitly.
+V1010,"CWE-134,CWE-138,CWE-20,CWE-78",Unchecked tainted data is used in expression.
+V1011,CWE-821,Function execution could be deferred. Consider specifying execution policy explicitly.
+V1012,CWE-192,The expression is always false. Overflow check is incorrect.
+V1013,CWE-670,Suspicious subexpression in a sequence of similar comparisons.
+V1014,CWE-682,Structures with members of real type are compared byte-wise.
+V1015,CWE-480,Suspicious simultaneous use of bitwise and logical operators.
+V1016,CWE-681,The value is out of range of enum values. This causes unspecified or undefined behavior.
+V1017,CWE-416,"Variable of the 'string_view' type references a temporary object, which will be removed after evaluation of an expression."
+V1018,"CWE-413,CWE-833","Usage of a suspicious mutex wrapper. It is probably unused, uninitialized, or already locked."
+V1019,CWE-480,Compound assignment expression is used inside condition.
+V1020,CWE-772,Function exited without performing epilogue actions. It is possible that there is an error.
+V1021,CWE-835,The variable is assigned the same value on several loop iterations.
+V1022,CWE-755,Exception was thrown by pointer. Consider throwing it by value instead.
+V1023,CWE-460,A pointer without owner is added to the container by the 'emplace_back' method. A memory leak will occur in case of an exception.
+V1024,CWE-20,Potential use of invalid data. The stream is checked for EOF before reading from it but is not checked after reading.
+V1025,CWE-820,New variable with default value is created instead of 'std::unique_lock' that locks on the mutex.
+V1026,CWE-190,The variable is incremented in the loop. Undefined behavior will occur in case of signed integer overflow.
+V1027,CWE-704,Pointer to an object of the class is cast to unrelated class.
+V1028,CWE-190,"Possible overflow. Consider casting operands, not the result."
+V1029,CWE-197,Numeric Truncation Error. Return value of function is written to N-bit variable.
+V1032,CWE-843,Pointer is cast to a more strictly aligned pointer type.
+V1034,CWE-834,Do not use real-type variables as loop counters.
+V1036,CWE-609,Potentially unsafe double-checked locking.
+V1037,CWE-691,Two or more case-branches perform the same actions.
+V1038,CWE-468,It is suspicious that a char or string literal is added to a pointer.
+V1041,CWE-825,Class member is initialized with dangling reference.
+V1042,CWE-1177,"This file is marked with copyleft license, which requires you to open the derived source code."
+V1044,CWE-834,Loop break conditions do not depend on the number of iterations.
+V1045,"CWE-248,CWE-703",The DllMain function throws an exception. Consider wrapping the throw operator in a try..catch block.
+V1046,CWE-682,Unsafe usage of the 'bool' and integer types together in the operation '&='.
+V1047,CWE-672,Lifetime of the lambda is greater than lifetime of the local variable captured by reference.
+V1048,CWE-1164,Variable 'foo' was assigned the same value.
+V1050,CWE-457,Uninitialized class member is used when initializing the base class.
+V1051,CWE-754,It is possible that an assigned variable should be checked in the next condition. Consider checking for typos.
+V1055,CWE-131,"The 'sizeof' expression returns the size of the container type, not the number of elements. Consider using the 'size()' function."
+V1057,CWE-337,Pseudo random sequence is the same at every program run. Consider assigning the seed to a value not known at compile-time.
+V1058,CWE-1025,Nonsensical comparison of two different functions' addresses.
+V1062,CWE-762,Class defines a custom new or delete operator. The opposite operator must also be defined.
+V1063,CWE-682,The modulo by 1 operation is meaningless. The result will always be zero.
+V1064,CWE-682,The left operand of integer division is less than the right one. The result will always be zero.
+V1065,CWE-682,Expression can be simplified: check similar operands.
+V1066,CWE-762,The 'SysFreeString' function should be called only for objects of the 'BSTR' type.
+V1067,CWE-755,Throwing from exception constructor may lead to unexpected behavior.
+V1070,CWE-681,Signed value is converted to an unsigned one with subsequent expansion to a larger type in ternary operator.
+V1072,CWE-212,Buffer needs to be securely cleared on all execution paths.
+V1073,CWE-483,Check the following code block after the 'if' statement. Consider checking for typos.
+V1076,CWE-506,Code contains invisible characters that may alter its logic. Consider enabling the display of invisible characters in the code editor.
+V1077,CWE-457,Conditional initialization inside the constructor may leave some members uninitialized.
+V1080,"CWE-570,CWE-571",Call of 'std::is_constant_evaluated' function always returns the same value.
+V1081,CWE-190,Argument of abs() function is minimal negative value. Such absolute value can't be represented in two's complement. This leads to undefined behavior.
+V1083,CWE-190,Signed integer overflow in arithmetic expression. This leads to undefined behavior.
+V1084,CWE-1024,The expression is always true/false. The value is out of range of enum values.
+V1085,CWE-190,Negative value is implicitly converted to unsigned integer type in arithmetic expression.
+V1086,"CWE-119,CWE-467,CWE-682",Call of the 'Foo' function will lead to buffer underflow.
+V1087,CWE-670,Upper bound of case range is less than its lower bound. This case may be unreachable.
+V1088,CWE-821,No objects are passed to the 'std::scoped_lock' constructor. No locking will be performed. This can cause concurrency issues.
+V1089,CWE-820,Waiting on condition variable without predicate. A thread can wait indefinitely or experience a spurious wake-up.
+V1090,CWE-248,The 'std::uncaught_exception' function is deprecated since C++17 and is removed in C++20. Consider replacing this function with 'std::uncaught_exceptions'.
+V1091,CWE-704,The pointer is cast to an integer type of a larger size. Casting pointer to a type of a larger size is an implementation-defined behavior.
+V1095,CWE-775,Usage of potentially invalid handle. The value should be non-negative.
+V1098,CWE-826,The 'emplace' / 'insert' function call contains potentially dangerous move operation. Moved object can be destroyed even if there is no insertion.
+V1099,CWE-908,Using the function of uninitialized derived class while initializing the base class will lead to undefined behavior.
+V1100,CWE-826,Unreal Engine. Declaring a pointer to a type derived from 'UObject' in a class that is not derived from 'UObject' is dangerous. The pointer may start pointing to an invalid object after garbage collection.
+V1101,CWE-665,Changing the default argument of a virtual function parameter in a derived class may result in unexpected behavior.
+V1103,CWE-188,The values of padding bytes are unspecified. Comparing objects with padding using 'memcmp' may lead to unexpected result.
+V1104,CWE-783,Priority of the 'M' operator is higher than that of the 'N' operator. Possible missing parentheses.
+V1106,CWE-772,Qt. Class inherited from 'QObject' should contain at least one constructor that takes a pointer to 'QObject'.
+V1109,CWE-477,Function is deprecated. Consider switching to an equivalent newer function.
+V1110,CWE-772,Constructor of a class inherited from 'QObject' does not use a pointer to a parent object.
+V1111,CWE-20,The index was used without check after it was checked in previous lines.
+V1112,CWE-682,Comparing expressions with different signedness can lead to unexpected results.
+V1114,CWE-911,Suspicious use of type conversion operator when working with COM interfaces. Consider using the 'QueryInterface' member function.
+V1116,CWE-778,Creating an exception object without an explanatory message may result in insufficient logging.
+V1118,CWE-269,Excessive file permissions can lead to vulnerabilities. Consider restricting file permissions.
+V2001,CWE-477,Consider using the extended version of the 'foo' function here.
+V2002,CWE-477,Consider using the 'Ptr' version of the 'foo' function here.
+V2003,CWE-681,Explicit conversion from 'float/double' type to signed integer type.
+V2004,CWE-681,Explicit conversion from 'float/double' type to unsigned integer type.
+V2007,CWE-480,This expression can be simplified. One of the operands in the operation equals NN. Probably it is a mistake.
+V2008,CWE-407,Cyclomatic complexity: NN. Consider refactoring the 'Foo' function.
+V2013,CWE-704,Consider inspecting the correctness of handling the N argument in the 'Foo' function.
+V2016,CWE-1177,Consider inspecting the function call. The function was annotated as dangerous.
+V2021,CWE-617,Using assertions may cause the abnormal program termination in undesirable contexts.
+V2509,CWE-676,MISRA. The function with the 'abort/exit/getenv/system' name should not be used.
+V2510,CWE-676,MISRA. The function with the 'qsort/bsearch' name should not be used.
+V2511,CWE-676,MISRA. Memory allocation and deallocation functions should not be used.
+V2512,CWE-676,MISRA. The macro with the 'setjmp' name and the function with the 'longjmp' name should not be used.
+V2513,CWE-676,MISRA. Unbounded functions performing string operations should not be used.
+V2599,CWE-676,MISRA. The standard signal handling functions should not be used.
+V2600,CWE-676,MISRA. The standard input/output functions should not be used.
+V2635,CWE-676,MISRA. The function with the 'system' name should not be used.
+V2636,CWE-676,MISRA. The functions with the 'rand' and 'srand' name of <stdlib.h> should not be used.
+V2658,CWE-561,MISRA. Dead code should not be used in a project.
+V5001,CWE-841,OWASP. It is highly probable that the semicolon ';' is missing after 'return' keyword.
+V5002,"CWE-1069,CWE-390,CWE-544",OWASP. An empty exception handler. Silent suppression of exceptions can hide the presence of bugs in source code during testing.
+V5003,CWE-390,OWASP. The object was created but it is not being used. The 'throw' keyword could be missing.
+V5004,CWE-190,OWASP. Consider inspecting the expression. Bit shifting of the 32-bit value with a subsequent expansion to the 64-bit type.
+V5005,CWE-190,"OWASP. A value is being subtracted from the unsigned variable. This can result in an overflow. In such a case, the comparison operation can potentially behave unexpectedly."
+V5006,CWE-190,"OWASP. More than N bits are required to store the value, but the expression evaluates to the T type which can only hold K bits."
+V5007,CWE-190,OWASP. Consider inspecting the loop expression. It is possible that the 'i' variable should be incremented instead of the 'n' variable.
+V5008,CWE-544,OWASP. Classes should always be derived from std::exception (and alike) as 'public'.
+V5009,"CWE-134,CWE-20,CWE-78",OWASP. Unchecked tainted data is used in expression.
+V5010,CWE-190,OWASP. The variable is incremented in the loop. Undefined behavior will occur in case of signed integer overflow.
+V5011,CWE-190,"OWASP. Possible overflow. Consider casting operands, not the result."
+V5012,CWE-609,OWASP. Potentially unsafe double-checked locking.
+V5013,"CWE-259,CWE-798",OWASP. Storing credentials inside source code can lead to security issues.
+V5014,CWE-327,OWASP. Cryptographic function is deprecated. Its use can lead to security issues. Consider switching to an equivalent newer function.

@@ -1,0 +1,187 @@
+ErrorCode,Mapping,Error Description
+V3001,"CWE-570,CWE-571",There are identical sub-expressions to the left and to the right of the 'foo' operator.
+V3003,CWE-570,The use of 'if (A) {...} else if (A) {...}' pattern was detected. There is a probability of logical error presence.
+V3004,CWE-691,The 'then' statement is equivalent to the 'else' statement.
+V3006,CWE-390,The object was created but it is not being used. The 'throw' keyword could be missing.
+V3007,CWE-691,Odd semicolon ';' after 'if/for/while' operator.
+V3008,CWE-563,The 'x' variable is assigned values twice successively. Perhaps this is a mistake.
+V3009,CWE-393,It's odd that this method always returns one and the same value of NN.
+V3010,CWE-252,The return value of function 'Foo' is required to be utilized.
+V3011,CWE-570,Two opposite conditions were encountered. The second condition is always false.
+V3012,CWE-783,"The '?:' operator, regardless of its conditional expression, always returns one and the same value."
+V3014,CWE-691,It is likely that a wrong variable is being incremented inside the 'for' operator. Consider reviewing 'X'.
+V3015,CWE-691,It is likely that a wrong variable is being compared inside the 'for' operator. Consider reviewing 'X'.
+V3016,CWE-691,The variable 'X' is being used for this loop and for the outer loop.
+V3018,CWE-670,Consider inspecting the application's logic. It's possible that 'else' keyword is missing.
+V3019,CWE-697,It is possible that an incorrect variable is compared with null after type conversion using 'as' keyword.
+V3020,CWE-670,An unconditional 'break/continue/return/goto' within a loop.
+V3021,CWE-561,There are two 'if' statements with identical conditional expressions. The first 'if' statement contains method return. This means that the second 'if' statement is senseless.
+V3022,"CWE-570,CWE-571",Expression is always true/false.
+V3023,CWE-571,Consider inspecting this expression. The expression is excessive or contains a misprint.
+V3024,CWE-682,An odd precise comparison. Consider using a comparison with defined precision: Math.Abs(A - B) < Epsilon or Math.Abs(A - B) > Epsilon.
+V3025,CWE-685,Incorrect format. Consider checking the N format items of the 'Foo' function.
+V3026,CWE-1339,The constant NN is being utilized. The resulting value could be inaccurate. Consider using the KK constant.
+V3027,CWE-476,The variable was utilized in the logical expression before it was verified against null in the same logical expression.
+V3028,CWE-691,Consider inspecting the 'for' operator. Initial and final values of the iterator are the same.
+V3030,CWE-571,Recurring check. This condition was already verified in previous line.
+V3032,CWE-835,"Waiting on this expression is unreliable, as compiler may optimize some of the variables. Use volatile variable(s) or synchronization primitives to avoid this."
+V3033,CWE-670,It is possible that this 'else' branch must apply to the previous 'if' statement.
+V3034,CWE-480,Consider inspecting the expression. Probably the '!=' should be used here.
+V3035,CWE-480,Consider inspecting the expression. Probably the '+=' should be used here.
+V3036,CWE-480,Consider inspecting the expression. Probably the '-=' should be used here.
+V3038,CWE-687,The argument was passed to method several times. It is possible that another argument should be passed instead.
+V3039,CWE-39,Consider inspecting the 'Foo' function call. Defining an absolute path to the file or directory is considered a poor style.
+V3040,CWE-682,The expression contains a suspicious mix of integer and real types.
+V3041,CWE-682,The expression was implicitly cast from integer type to real type. Consider utilizing an explicit type cast to avoid the loss of a fractional part.
+V3042,CWE-476,Possible NullReferenceException. The '?.' and '.' operators are used for accessing members of the same object.
+V3043,CWE-483,The code's operational logic does not correspond with its formatting.
+V3051,CWE-704,An excessive type cast or check. The object is already of the same type.
+V3052,CWE-390,The original exception object was swallowed. Stack of original exception could be lost.
+V3054,CWE-609,Potentially unsafe double-checked locking. Use volatile variable(s) or synchronization primitives to avoid this.
+V3055,CWE-481,Suspicious assignment inside the condition expression of 'if/while/for' operator.
+V3056,CWE-682,Consider reviewing the correctness of 'X' item's usage.
+V3057,CWE-628,Function receives an odd argument.
+V3058,CWE-462,An item with the same key has already been added.
+V3060,CWE-682,A value of variable is not modified. Consider inspecting the expression. It is possible that other value should be present instead of '0'.
+V3063,"CWE-570,CWE-571",A part of conditional expression is always true/false if it is evaluated.
+V3064,CWE-369,Division or mod division by zero.
+V3066,CWE-683,Possible incorrect order of arguments passed to method.
+V3067,CWE-691,"It is possible that 'else' block was forgotten or commented out, thus altering the program's operation logics."
+V3069,CWE-670,"It's possible that the line was commented out improperly, thus altering the program's operation logics."
+V3070,CWE-457,Uninitialized variables are used when initializing the 'A' variable.
+V3076,"CWE-570,CWE-571",Comparison with 'double.NaN' is meaningless. Use 'double.IsNaN()' method instead.
+V3079,CWE-821,The 'ThreadStatic' attribute is applied to a non-static 'A' field and will be ignored.
+V3080,CWE-476,Possible null dereference.
+V3082,CWE-563,The 'Thread' object is created but is not started. It is possible that a call to 'Start' method is missing.
+V3083,CWE-367,"Unsafe invocation of event, NullReferenceException is possible. Consider assigning event to a local variable before invoking it."
+V3089,CWE-665,Initializer of a field marked by [ThreadStatic] attribute will be called once on the first accessing thread. The field will have default value on different threads.
+V3090,"CWE-662,CWE-833",Unsafe locking on an object.
+V3092,CWE-670,Range intersections are possible within conditional expressions.
+V3093,CWE-480,The operator evaluates both operands. Perhaps a short-circuit operator should be used instead.
+V3095,CWE-476,"The object was used before it was verified against null. Check lines: N1, N2."
+V3098,CWE-670,The 'continue' operator will terminate 'do { ... } while (false)' loop because the condition is always false.
+V3099,CWE-684,Not all the members of type are serialized inside 'GetObjectData' method.
+V3100,CWE-476,NullReferenceException is possible. Unhandled exceptions in destructor lead to termination of runtime.
+V3105,CWE-690,The 'a' variable was used after it was assigned through null-conditional operator. NullReferenceException is possible.
+V3106,"CWE-125,CWE-787",Possibly index is out of bound.
+V3108,CWE-684,It is not recommended to return null or throw exceptions from 'ToString()' method.
+V3110,CWE-674,Possible infinite recursion.
+V3112,CWE-697,An abnormality within similar comparisons. It is possible that a typo is present inside the expression.
+V3113,CWE-190,Consider inspecting the loop expression. It is possible that different variables are used inside initializer and iterator.
+V3114,CWE-404,IDisposable object is not disposed before method returns.
+V3115,CWE-684,It is not recommended to throw exceptions from 'Equals(object obj)' method.
+V3116,CWE-835,Consider inspecting the 'for' operator. It's possible that the loop will be executed incorrectly or won't be executed at all.
+V3120,CWE-835,Potentially infinite loop. The variable from the loop exit condition does not change its value between iterations.
+V3122,CWE-570,Uppercase (lowercase) string is compared with a different lowercase (uppercase) string.
+V3123,CWE-783,Perhaps the '??' operator works in a different way than it was expected. Its priority is lower than priority of other operators in its left part.
+V3125,CWE-476,"The object was used after it was verified against null. Check lines: N1, N2."
+V3127,CWE-682,"Two similar code fragments were found. Perhaps, this is a typo and 'X' variable should be used instead of 'Y'."
+V3128,CWE-665,The field (property) is used before it is initialized in constructor.
+V3131,CWE-704,"The expression is checked for compatibility with the type 'A', but is casted to the 'B' type."
+V3132,CWE-665,A terminal null is present inside a string. The '\0xNN' characters were encountered. Probably meant: '\xNN'.
+V3133,CWE-682,Postfix increment/decrement is senseless because this variable is overwritten.
+V3134,CWE-128,Shift by N bits is greater than the size of type.
+V3135,CWE-691,The initial value of the index in the nested loop equals 'i'. Consider using 'i + 1' instead.
+V3136,CWE-691,Constant expression in switch statement.
+V3137,CWE-563,The variable is assigned but is not used by the end of the function.
+V3142,CWE-561,Unreachable code detected. It is possible that an error is present.
+V3145,CWE-476,Unsafe dereference of a WeakReference target. The object could have been garbage collected before the 'Target' property was accessed.
+V3146,CWE-476,Possible null dereference. A method can return default null value.
+V3147,CWE-567,Non-atomic modification of volatile variable.
+V3148,CWE-476,Casting potential 'null' value to a value type can lead to NullReferenceException.
+V3149,CWE-476,Dereferencing the result of 'as' operator can lead to NullReferenceException.
+V3151,CWE-369,"Potential division by zero. Variable was used as a divisor before it was compared to zero. Check lines: N1, N2."
+V3152,CWE-369,"Potential division by zero. Variable was compared to zero before it was used as a divisor. Check lines: N1, N2."
+V3153,CWE-476,Dereferencing the result of null-conditional access operator can lead to NullReferenceException.
+V3154,CWE-682,The 'a % b' expression always evaluates to 0.
+V3155,CWE-682,The expression is incorrect or it can be simplified.
+V3156,CWE-628,The argument of the method is not expected to be null.
+V3157,CWE-682,Suspicious division. Absolute value of the left operand is less than the right operand.
+V3158,CWE-682,Suspicious division. Absolute values of both operands are equal.
+V3159,CWE-563,Modified value of the operand is not used after the increment/decrement operation.
+V3160,CWE-686,Argument of incorrect type is passed to the 'Enum.HasFlag' method.
+V3161,CWE-686,Comparing value type variables with 'ReferenceEquals' is incorrect because compared values will be boxed.
+V3163,"CWE-1069,CWE-390,CWE-544",An exception handling block does not contain any code.
+V3164,CWE-544,Exception classes should be publicly accessible.
+V3165,CWE-628,The expression of the 'char' type is passed as an argument of the 'A' type whereas similar overload with the string parameter exists.
+V3166,CWE-628,Calling the 'SingleOrDefault' method may lead to 'InvalidOperationException'.
+V3167,CWE-821,Parameter of 'CancellationToken' type is not used inside function's body.
+V3168,CWE-476,Awaiting on expression with potential null value can lead to throwing of 'NullReferenceException'.
+V3170,CWE-670,Both operands of the '??' operator are identical.
+V3171,CWE-839,Potentially negative value is used as the size of an array.
+V3172,CWE-483,The 'if/if-else/for/while/foreach' statement and code block after it are not related. Inspect the program's logic.
+V3174,CWE-670,Suspicious subexpression in a sequence of similar comparisons.
+V3175,CWE-667,Locking operations must be performed on the same thread. Using 'await' in a critical section may lead to a lock being released on a different thread.
+V3176,"CWE-570,CWE-571",The '&=' or '|=' operator is redundant because the right operand is always true/false.
+V3177,CWE-783,Logical literal belongs to second operator with a higher priority. It is possible literal was intended to belong to '??' operator instead.
+V3178,CWE-672,Calling method or accessing property of potentially disposed object may result in exception.
+V3179,CWE-628,Calling element access method for potentially empty collection may result in exception.
+V3180,CWE-687,The 'HasFlag' method always returns 'true' because the value '0' is passed as its argument.
+V3181,CWE-682,The result of '&' operator is '0' because one of the operands is '0'.
+V3182,CWE-480,The result of '&' operator is always '0'.
+V3183,CWE-670,Code formatting implies that the statement should not be a part of the 'then' branch that belongs to the preceding 'if' statement.
+V3184,CWE-687,The argument's value is greater than the size of the collection. Passing the value into the 'Foo' method will result in an exception.
+V3185,CWE-628,An argument containing a file path could be mixed up with another argument. The other function parameter expects a file path instead.
+V3186,CWE-687,The arguments violate the bounds of collection. Passing these values into the method will result in an exception.
+V3190,CWE-821,Concurrent modification of a variable may lead to errors.
+V3192,CWE-697,Type member is used in the 'GetHashCode' method but is missing from the 'Equals' method.
+V3193,CWE-366,Data processing results are potentially used before asynchronous output reading is complete. Consider calling 'WaitForExit' overload with no arguments before using the data.
+V3194,CWE-704,Calling 'OfType' for collection will return an empty collection. It is not possible to cast collection elements to the type parameter.
+V3195,CWE-476,Collection initializer implicitly calls 'Add' method. Using it on member with default value of null will result in null dereference exception.
+V3197,CWE-697,The compared value inside the 'Object.Equals' override is converted to a different type that does not contain the override.
+V3198,CWE-1164,The variable is assigned the same value that it already holds.
+V3199,"CWE-125,CWE-787",The index from end operator is used with the value that is less than or equal to zero. Collection index will be out of bounds.
+V3200,CWE-190,Possible overflow. The expression will be evaluated before casting. Consider casting one of the operands instead.
+V3202,CWE-561,Unreachable code detected. The 'case' value is out of the range of the match expression.
+V3204,CWE-192,The expression is always false due to implicit type conversion. Overflow check is incorrect.
+V3207,CWE-670,The 'not A or B' logical pattern may not work as expected. The 'not' pattern is matched only to the first expression from the 'or' pattern.
+V3208,CWE-686,Unity Engine. Using 'WeakReference' with 'UnityEngine.Object' is not supported. GC will not reclaim the object's memory because it is linked to a native object.
+V3210,CWE-686,Unity Engine. Unity does not allow removing the 'Transform' component using 'Destroy' or 'DestroyImmediate' methods. The method call will be ignored.
+V3213,CWE-628,Unity Engine. The 'GetComponent' method must be instantiated with a type that inherits from 'UnityEngine.Component'.
+V3214,CWE-691,Unity Engine. Using Unity API in the background thread may result in an error.
+V3215,CWE-1106,Unity Engine. Passing a method name as a string literal into the 'StartCoroutine' is unreliable.
+V3216,CWE-754,Unity Engine. Checking a field with a specific Unity Engine type for null may not work correctly due to implicit field initialization by the engine.
+V3217,"CWE-190,CWE-191",Possible overflow as a result of an arithmetic operation.
+V3218,CWE-193,Loop condition may be incorrect due to an off-by-one error.
+V3220,CWE-563,The result of the LINQ method with deferred execution is never used. The method will not be executed.
+V3222,CWE-772,Potential resource leak. An inner IDisposable object might remain non-disposed if the constructor of the outer object throws an exception.
+V3223,CWE-821,Inconsistent use of a potentially shared variable with and without a lock can lead to a data race.
+V3224,CWE-685,"Consider using an overload with 'IEqualityComparer', as it is present in similar cases for the same collection element type."
+V3225,CWE-253,A data reading method returns the number of bytes that were read and cannot return the value of -1.
+V3226,CWE-404,Potential resource leak. The disposing method will not be called if an exception occurs in the 'try' block. Consider calling it in the 'finally' block.
+V3227,CWE-783,The precedence of the arithmetic operator is higher than that of the shift operator. Consider using parentheses in the expression.
+V3228,CWE-697,It is possible that an assigned variable should be used in the next condition. Consider checking for misprints.
+V3231,CWE-248,Async method returning 'void' throws an exception. Callers will not be able to catch this exception. Consider replacing the return type with 'Task'.
+V3232,CWE-134,Use of externally-controlled format string. Potentially tainted data is used as a format string.
+V4001,CWE-1235,Unity Engine. Boxing inside a frequently called method may decrease performance.
+V5601,"CWE-259,CWE-798",OWASP. Storing credentials inside source code can lead to security issues.
+V5602,CWE-390,OWASP. The object was created but it is not being used. The 'throw' keyword could be missing.
+V5603,CWE-390,OWASP. The original exception object was swallowed. Stack of original exception could be lost.
+V5604,CWE-609,OWASP. Potentially unsafe double-checked locking. Use volatile variable(s) or synchronization primitives to avoid this.
+V5605,CWE-367,"OWASP. Unsafe invocation of event, NullReferenceException is possible. Consider assigning event to a local variable before invoking it."
+V5606,"CWE-1069,CWE-390,CWE-544",OWASP. An exception handling block does not contain any code.
+V5607,CWE-544,OWASP. Exception classes should be publicly accessible.
+V5608,CWE-89,OWASP. Possible SQL injection. Potentially tainted data is used to create SQL command.
+V5609,CWE-22,OWASP. Possible path traversal vulnerability. Potentially tainted data is used as a path.
+V5610,CWE-79,OWASP. Possible XSS vulnerability. Potentially tainted data might be used to execute a malicious script.
+V5611,CWE-502,OWASP. Potential insecure deserialization vulnerability. Potentially tainted data is used to create an object using deserialization.
+V5612,CWE-326,OWASP. Do not use old versions of SSL/TLS protocols as it may cause security issues.
+V5613,"CWE-327,CWE-328",OWASP. Use of outdated cryptographic algorithm is not recommended.
+V5614,CWE-611,OWASP. Potential XXE vulnerability. Insecure XML parser is used to process potentially tainted data.
+V5615,CWE-776,OWASP. Potential XEE vulnerability. Insecure XML parser is used to process potentially tainted data.
+V5616,"CWE-77,CWE-78,CWE-88",OWASP. Possible command injection. Potentially tainted data is used to create OS command.
+V5617,CWE-613,OWASP. Assigning potentially negative or large value as timeout of HTTP session can lead to excessive session expiration time.
+V5618,CWE-918,OWASP. Possible server-side request forgery. Potentially tainted data is used in the URL.
+V5619,CWE-117,OWASP. Possible log injection. Potentially tainted data is written into logs.
+V5620,CWE-90,OWASP. Possible LDAP injection. Potentially tainted data is used in a search filter.
+V5621,CWE-209,OWASP. Error message contains potentially sensitive data that may be exposed.
+V5622,CWE-643,OWASP. Possible XPath injection. Potentially tainted data is used in the XPath expression.
+V5623,CWE-601,OWASP. Possible open redirect vulnerability. Potentially tainted data is used in the URL.
+V5624,CWE-15,OWASP. Use of potentially tainted data in configuration may lead to security issues.
+V5625,"CWE-1035,CWE-1352",OWASP. Referenced package contains vulnerability.
+V5626,CWE-1333,OWASP. Possible ReDoS vulnerability. Potentially tainted data is processed by regular expression that contains an unsafe pattern.
+V5627,CWE-943,OWASP. Possible NoSQL injection. Potentially tainted data is used to create query.
+V5628,"CWE-22,CWE-641,CWE-99",OWASP. Possible Zip Slip vulnerability. Potentially tainted data is used in the path to extract the file.
+V5629,CWE-507,OWASP. Code contains invisible characters that may alter its logic. Consider enabling the display of invisible characters in the code editor.
+V5630,CWE-113,OWASP. Possible cookie injection. Potentially tainted data is used to create a cookie.
+V5631,CWE-134,OWASP. Use of externally-controlled format string. Potentially tainted data is used as a format string.
