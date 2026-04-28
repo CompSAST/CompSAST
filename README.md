@@ -11,6 +11,8 @@
 The following repository aimed to research what popular static analisys security testing (SAST) tools are best
 in vulnerabilities finding. The experiment would take several SAST instruments that able to multi-language scan in application, therefore, tools like [Bandit](https://github.com/pycqa/bandit) or [Clang-analizer](https://clang-analyzer.llvm.org/) are not in the testing list.
 
+**Main research file**: [RESEARCH](./RESEARCH.md)
+
 #### SAST tools to compare:
 
 - [Semgrep](https://semgrep.dev/)
