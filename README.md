@@ -25,7 +25,7 @@ in vulnerabilities finding. The experiment would take several SAST instruments t
 
 #### Benchmarks to test
 
-- [IAMeter](github.com/POSIdev-community/) by Positive Technologies for Go, Java, Python
+- [IAMeter](github.com/POSIdev-community/) by Positive Technologies for Go, Java, PHP
 - [OWASP Benchmark](https://github.com/OWASP-Benchmark) for Java, Python
 - [NIST Juliet](https://samate.nist.gov/SARD/test-suites) for Java, C/C++, C#
 
