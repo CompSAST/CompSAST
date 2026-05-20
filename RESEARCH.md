@@ -7,6 +7,52 @@
 >- Kirill Nosov
 >- Sarmat Lutfullin
 
+## Content
+
+- [SAST tools comparison](#sast-tools-comparison)
+  - [Introduction](#introduction)
+  - [IAMeter](#iameter)
+    - [Scope of Scanning](#scope-of-scanning)
+    - [IAMeter_Go](#iameter_go)
+    - [IAMeter_Java](#iameter_java)
+    - [IAMeter_PHP](#iameter_php)
+    - [Analyzer Usage](#analyzer-usage)
+    - [Analysis Process and Helper Scripts](#analysis-process-and-helper-scripts)
+  - [OWASP Benchmarks](#owasp-benchmarks)
+    - [Scope of Scanning](#1-scope-of-scanning)
+    - [Tools Used](#2-tools-used)
+    - [Scanning Methodology](#3-scanning-methodology)
+    - [Results](#results-)
+  - [NIST Juliet C#](#nist-juliet-c)
+    - [Scope of Scanning](#scope-of-scanning-1)
+    - [Which tools were/not used](#which-tools-werenot-used)
+    - [Terms](#terms)
+    - [Scan process](#scan-process)
+    - [Benchmarking](#benchmarking)
+    - [Semgrep](#semgrep)
+    - [Opengrep](#opengrep)
+    - [CodeQL](#codeql)
+    - [PVS-Studio](#pvs-studio)
+    - [Results](#results)
+    - [Juliet CWE coverage](#juliet-cwe-coverage)
+  - [NIST Juliet Java](#nist-juliet-java)
+    - [Scanned Dataset](#1-scanned-dataset)
+    - [Tools Used for Scanning](#2-tools-used-for-scanning)
+    - [Scanning Methodology](#3-scanning-methodology)
+    - [Result Analysis](#4-analysis-results)
+  - [NIST Juliet C/C++](#nist-juliet-cc)
+    - [Scanned Dataset](#1-scanned-dataset-1)
+    - [Tools Used for Scanning](#2-tools-used-for-scanning-1)
+    - [Scanning Methodology](#3-scanning-methodology)
+    - [Analysis Results by Analyzer](#4-analysis-results-by-analyzer)
+  - [Conclusion](#conclusion)
+    - [Precision](#precision)
+    - [Recall](#recall)
+    - [F1-Score](#f1-score)
+    - [Specificity and Accuracy](#specificity-and-accuracy)
+    - [Cross-Benchmark Observations](#cross-benchmark-observations)
+    - [Limitations](#limitations)
+
 ## Introduction
 
 This project constitutes a modest comparative analysis of seven Static Application Security Testing (SAST) tools, evaluated across three security benchmarks of varying scales. The objective is to aggregate and scrutinize the outputs of SAST scanners, assess their vulnerability detection efficacy using MITRE CWE metrics, and conduct pairwise comparisons within feasible dimensions.
